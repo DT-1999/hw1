@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <br><br><br>
+    <table align="center" border="2" >
+        <thead align="center">
+            <th>rank</th>
+            <th>image</th>
+            <th>name</th>
+            <th>address</th>
+            <th>price</th>
+            <th>overallrating</th>
+            <th>comment numbers</th>
+            
+            
+        </thead>
+        <tbody>
+            {% for restaurant in restaurants %}
+                <tr align="center">
+                    <td ><b><font color="#FF0000">{{ restaurant.rank }}</font></b></td>                 	
+                    <td><img height="160" src ="{{ restaurant.image }}" scr=></td>
+                    <td><font color="#3300FF">{{ restaurant.name }}</font></td>
+                    <td>{{ restaurant.address }}</td>
+                    <td>{{ restaurant.price }}</td>
+                    <td>{{ restaurant.overall_rating }}</td>
+                    <td>{{ restaurant.comment_num }}</td>
+                </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
